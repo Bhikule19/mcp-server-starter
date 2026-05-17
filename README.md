@@ -2,7 +2,7 @@
 
 A minimal **Model Context Protocol** server in ~50 lines of TypeScript. Exposes one tool — `get_weather(city)` — that Claude Desktop (or any MCP client) can call.
 
-Companion repo for [this LinkedIn post](#) on building your first MCP server.
+Companion repo for [this LinkedIn post](https://www.linkedin.com/posts/abhishek-bhikule_mcp-typescript-aiengineering-activity-7461722600176750592-DM82?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC3TJdcBU20UwdDZyYqbI35loHBVX50IiyI) on building your first MCP server.
 
 ---
 
