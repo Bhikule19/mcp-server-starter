@@ -1,0 +1,15 @@
+{
+  "_comment": "Shared API key — simplest auth. One key, one identity, everyone using this config acts as the key's owner. Fine for solo dev, CI jobs, and internal scripts. NOT fine when multiple humans share the server.",
+  "mcpServers": {
+    "your-app": {
+      "command": "npx",
+      "args": [
+        "mcp-remote",
+        "https://api.your-app.example.com/mcp"
+      ],
+      "env": {
+        "API_KEY": "sk_live_replace_me"
+      }
+    }
+  }
+}

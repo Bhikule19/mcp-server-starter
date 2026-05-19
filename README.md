@@ -111,6 +111,19 @@ That's it. Same protocol, your handler.
 
 ---
 
+## Remote servers + auth
+
+The server above uses **stdio** transport — Claude spawns it as a subprocess on your machine, no auth needed.
+
+If your server lives on the internet instead, see [`examples/mcp-remote/`](./examples/mcp-remote/) for two working configs:
+
+- **[`shared-key.json`](./examples/mcp-remote/shared-key.json)** — one API key, one identity. Right for solo dev, CI jobs, internal scripts.
+- **[`oauth.json`](./examples/mcp-remote/oauth.json)** — OAuth discovery via RFC 9728 + 7591. Right when multiple humans share the server, or you need an audit trail.
+
+Decision rule: **default to shared keys. Switch to OAuth the moment a second human touches the server.**
+
+---
+
 ## Stack
 
 - [`@modelcontextprotocol/sdk`](https://www.npmjs.com/package/@modelcontextprotocol/sdk) — official MCP TypeScript SDK

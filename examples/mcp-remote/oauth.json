@@ -1,0 +1,12 @@
+{
+  "_comment": "OAuth discovery — no secrets in the config. mcp-remote hits the server, gets a 401 with WWW-Authenticate, discovers OAuth endpoints via /.well-known/oauth-authorization-server, registers itself (RFC 7591), and opens a browser for PKCE login. Each user logs in as themselves. Tokens cache locally under ~/.mcp-auth/.",
+  "mcpServers": {
+    "your-app": {
+      "command": "npx",
+      "args": [
+        "mcp-remote",
+        "https://api.your-app.example.com/mcp"
+      ]
+    }
+  }
+}
