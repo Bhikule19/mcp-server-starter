@@ -122,6 +122,16 @@ If your server lives on the internet instead, see [`examples/mcp-remote/`](./exa
 
 Decision rule: **default to shared keys. Switch to OAuth the moment a second human touches the server.**
 
+### Verifying your OAuth setup
+
+If you've implemented the OAuth side, run [`scripts/test-discovery.sh`](./scripts/test-discovery.sh) against your server to validate that RFC 9728, RFC 8414, and RFC 7591 are all wired correctly:
+
+```bash
+./scripts/test-discovery.sh https://api.your-app.example.com
+```
+
+Green checks for each step that passes, red crosses for what's missing. Exit code `0` on full pass — works in CI.
+
 ---
 
 ## Stack
